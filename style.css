@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-items: start;
+    align-items: center;
+    min-height: 100vh;
+    background: #161623;
+}
+body::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(255, 8, 0),rgb(255, 196, 0));
+    clip-path: circle(30% at right 70%);
+}
+body::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#b1d6cb,#13e9e9);
+    clip-path: circle(20% at 10% 10%);
+}
+.coutainer
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    z-index: 1;
+}
+.coutainer .card
+{
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20x 50px rgba(251, 255, 255, 0.5) !important;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1) ;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(151, 255, 255, 0.5);
+    border-left: 1px solid rgba(151, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+.coutainer .card .content
+{
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s;
+}
+.coutainer .card:hover .content
+{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.coutainer .card .content img
+{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 150px;
+    height: 130px;
+    color: rgba(255, 255, 255, 0.05);
+    top: -10px;
+}
+.coutainer .card .content h3
+{
+    font-size: 1.8em ;
+    color: #fff;
+    z-index: 1;
+}
+.coutainer .card .content p
+{
+    font-size: 1em ;
+    color: #fff;
+    font-weight: 300;
+}
+.coutainer .card .content a
+{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: 1px 10px 20px rgba(255, 255, 255, 0.1) ;
+}
