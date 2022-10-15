@@ -12,7 +12,7 @@ body
     justify-items: start;
     align-items: center;
     min-height: 100vh;
-    background: #161623;
+    background: rgb(17, 33, 43);
 }
 body::before
 {
@@ -33,9 +33,105 @@ body::after
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(#b1d6cb,#13e9e9);
-    clip-path: circle(20% at 10% 10%);
+    background: linear-gradient(#1f2225,#cbcece);
+    clip-path: circle(20% at 10% 20%);
+    animation: 10s infinite left;
 }
+section
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    z-index: 1;
+    height: 90px;
+    background: linear-gradient(rgba(206, 11, 11, 0.479),rgb(3, 59, 20)); 
+    animation-delay: 10s;
+    transform: translateX();
+}
+@keyframes right 
+{
+    0%   {  background: linear-gradient(rgb(151, 24, 24),rgb(6, 84, 90));}
+    25%  {  background: linear-gradient(rgb(255, 115, 0),rgb(63, 3, 75)); }
+    50%  {  background: linear-gradient(rgb(255, 17, 0),rgb(6, 28, 90)); }
+    75%  {  background: linear-gradient(rgb(255, 251, 0),rgb(10, 217, 231)); }
+    100% {  background: linear-gradient(rgb(123, 255, 0),rgb(68, 18, 204)); }
+
+   
+ }
+   
+  
+  
+
+   
+  
+  @keyframes left 
+  {
+        
+        
+        0%   {  background: linear-gradient(rgb(2, 43, 71),rgb(6, 84, 90));}
+        25%  {  background: linear-gradient(rgb(87, 185, 156),rgb(173, 4, 207)); }
+        50%  {  background: linear-gradient(rgb(255, 17, 0),rgb(6, 28, 90)); }
+        75%  {  background: linear-gradient(rgb(255, 251, 0),rgb(10, 217, 231)); }
+        100% {  background: linear-gradient(rgb(19, 138, 15),rgb(248, 6, 6)); }
+  }
+
+    
+header
+{
+   
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    align-items: center;
+    width: 1200px;
+    margin: 0 auto;
+}
+header img{
+    height: 50px;
+}
+header ul 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    
+}
+header ul li a
+{
+    text-decoration: none;
+    color: rgb(228, 129, 17);
+}
+.login
+{
+    display: flex;
+    justify-content: center;
+   
+}
+.login samp
+{
+    margin: 0 20px;
+    color: rgb(97, 21, 197);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login button
+{
+    margin: 0 20px;
+    color: rgb(10, 8, 172);
+    font-weight: 600;
+    height: 40px;
+    padding: 5px 30px;
+    border: none;
+    background: linear-gradient(rgb(0, 204, 255),rgb(6, 128, 44));
+    border-radius: 4px;
+    box-shadow: inset 20px 20x 50px rgba(255, 254, 251, 0.945) 
+    inset -20px -20px -50px rgba(240, 19, 19, 0.5) !important;
+}
+
 .coutainer
 {
     position: relative;
@@ -63,6 +159,7 @@ body::after
     border-top: 1px solid rgba(151, 255, 255, 0.5);
     border-left: 1px solid rgba(151, 255, 255, 0.5);
     backdrop-filter: blur(5px);
+    animation: 10s infinite right ;
 }
 .coutainer .card .content
 {
@@ -71,6 +168,7 @@ body::after
     transform: translateY(100px);
     opacity: 0;
     transition: 0.5s;
+    animation: 10s infinite right;
 }
 .coutainer .card:hover .content
 {
